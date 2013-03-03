@@ -49,3 +49,11 @@ mysql_database 'set default admin info' do
   SQL
   action :nothing
 end
+
+# install all toolkits
+%w(graphicsmagick imagemagick php5-gd ffmpeg).each do |pkg|
+  package pkg do
+    action :install
+    notifies :restart, 'service[apache2]', :delayed
+  end
+end
