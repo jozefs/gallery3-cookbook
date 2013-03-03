@@ -57,3 +57,10 @@ end
     notifies :restart, 'service[apache2]', :delayed
   end
 end
+
+# install developer tools
+%w(git-core).each do |pkg|
+  package pkg do
+    action :install
+  end
+end
