@@ -8,6 +8,6 @@ default[:gallery3][:database][:name] = 'gallery3'
 default[:gallery3][:database][:username] = 'root'
 default[:gallery3][:database][:password] = ''
 
-# Gallery3
+# Gallery3 admin info (if installed via the 'install' recipe)
 default[:gallery3][:admin][:password] = 'adminsecret'
 default[:gallery3][:admin][:email] = 'admin@example.com'
