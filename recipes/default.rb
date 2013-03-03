@@ -8,3 +8,4 @@
 #
 
 include_recipe 'gallery3::database'
+include_recipe 'gallery3::webserver'

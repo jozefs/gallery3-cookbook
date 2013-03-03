@@ -8,3 +8,4 @@ version          "0.1.0"
 
 depends 'mysql', '~> 2.1.2'
 depends 'database', '~> 1.3.12'
+depends 'apache2', '~> 1.6.0'

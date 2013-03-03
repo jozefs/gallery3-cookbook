@@ -1,0 +1,7 @@
+<VirtualHost *:80>
+    ServerName <%= node[:fqdn] %>
+    ServerAlias <%= node[:gallery3][:webserver][:alias] %>
+    DocumentRoot <%= @params[:docroot] %>
+    ErrorLog <%= node[:apache][:log_dir] %>/error.log
+    CustomLog <%= node[:apache][:log_dir] %>/access.log vhost_combined
+</VirtualHost>
