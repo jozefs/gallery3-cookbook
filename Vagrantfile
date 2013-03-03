@@ -40,10 +40,12 @@ Vagrant::Config.run do |config|
   # computers to access the VM, whereas host only networking does not.
   # config.vm.forward_port 80, 8080
 
-  # Share an additional folder to the guest VM. The first argument is
-  # an identifier, the second is the path on the guest to mount the
-  # folder, and the third is the path on the host to the actual folder.
-  # config.vm.share_folder "v-data", "/vagrant_data", "../data"
+  # Share an the Gallery3 folder to the VM. We assume that it is at the same
+  # level in the directory hierarchy as the base directory of this repository.
+  #
+  # In the future, we should gracefully handle the case when this directory
+  # is missing.
+  config.vm.share_folder("gallery3", "/gallery3", "../gallery3", :nfs => true)
 
   config.ssh.max_tries = 40
   config.ssh.timeout   = 120
@@ -62,5 +64,8 @@ Vagrant::Config.run do |config|
     chef.run_list = [
       "recipe[gallery::default]"
     ]
+
+    # Uncomment the following line to output Chef debug information
+    # chef.log_level = :debug
   end
 end
