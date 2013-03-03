@@ -21,6 +21,7 @@ mysql_database_user node[:gallery3][:database][:username] do
   connection database_connection
   password node[:gallery3][:database][:password]
   action :create
+  not_if {node[:gallery3][:database][:username] == 'root'}
 end
 
 mysql_database_user node[:gallery3][:database][:username] do
