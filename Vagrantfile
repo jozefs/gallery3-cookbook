@@ -62,7 +62,7 @@ Vagrant::Config.run do |config|
     }
 
     chef.run_list = [
-      "recipe[gallery::default]"
+      "recipe[gallery3::default]"
     ]
 
     # Uncomment the following line to output Chef debug information

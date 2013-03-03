@@ -7,4 +7,4 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'gallery::database'
+include_recipe 'gallery3::database'

@@ -1,4 +1,4 @@
-name             "gallery"
+name             "gallery3"
 maintainer       "Jozef Selesi"
 maintainer_email "selesi@gmail.com"
 license          "All rights reserved"
