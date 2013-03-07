@@ -16,6 +16,9 @@ it does contain a recipe for performing the installation.
 
 # Usage
 
+If you're looking for instructions on using the development box, please refer to
+the [Gallery 3 wiki](http://codex.galleryproject.org/Gallery3:Using_Vagrant).
+
 # Attributes
 
 # Recipes
