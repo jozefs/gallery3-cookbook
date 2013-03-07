@@ -9,6 +9,7 @@
 
 include_recipe 'gallery3::database'
 include_recipe 'gallery3::webserver'
+include_recipe 'gallery3::email'
 include_recipe 'gallery3::php'
 
 # install all toolkits
