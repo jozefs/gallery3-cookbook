@@ -46,3 +46,10 @@ mysql_database_user node[:gallery3][:database][:username] do
   privileges [:all]
   action :grant
 end
+
+# allow remote access for root user (do not use this in production!)
+mysql_database node[:gallery3][:database][:name] do
+  connection database_connection
+  sql "grant all privileges on *.* to 'root' identified by '';"
+  action :query
+end
