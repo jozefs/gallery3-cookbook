@@ -15,5 +15,6 @@ Vagrant::Config.run do |config|
   # repository.
   config.vm.share_folder("gallery3", "/gallery3", ".", :nfs => true)
 
+  # Use 1GB of RAM by default.
   config.vm.customize ["modifyvm", :id, "--memory", 1024]
 end
